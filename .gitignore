@@ -1,0 +1,36 @@
+# ⚙️ Node.js dependencies
+node_modules/
+
+# 📦 Angular build output
+dist/
+.out/
+
+# 🧰 Tauri build output (Rust)
+src-tauri/target/
+src-tauri/bundle/
+
+# 🧪 Logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 💻 IDE/editor settings
+.vscode/
+.idea/
+
+# 🧹 OS-specific files
+.DS_Store       # macOS Finder metadata
+Thumbs.db       # Windows image cache
+ehthumbs.db     # Windows thumbnail cache
+
+# 🧱 Temporary files
+*.log
+*.tmp
+*.swp
+
+# 🦀 Rust: lock file (optional — usually versioned in Rust-only projects)
+Cargo.lock
+
+# 🚫 Optional: lock file from npm (comment this out if you want deterministic builds)
+package-lock.json
