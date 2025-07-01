@@ -34,3 +34,6 @@ Cargo.lock
 
 # 🚫 Optional: lock file from npm (comment this out if you want deterministic builds)
 package-lock.json
+
+# Python virtual environment
+venv/

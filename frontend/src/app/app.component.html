@@ -1,1 +1,69 @@
-<h1>Hello, world</h1>
+<div class="flex h-screen w-screen bg-gray-900 text-gray-200">
+  <!-- Sidebar -->
+  <aside class="w-52 bg-gray-800 border-r border-gray-700 p-4 flex flex-col">
+    <div class="text-purple-500 mb-5 font-semibold text-lg">
+      <h2>Jarvis Tools</h2>
+    </div>
+    <nav>
+      <ul class="list-none p-0 m-0">
+        <li class="mb-2"><a href="#" class="block p-2 rounded-md text-gray-200 hover:bg-gray-700 active:bg-purple-600 active:text-white transition-colors duration-200">File Converter</a></li>
+        <li class="mb-2"><a href="#" class="block p-2 rounded-md text-gray-200 hover:bg-gray-700 active:bg-purple-600 active:text-white transition-colors duration-200">Deep Search</a></li>
+      </ul>
+    </nav>
+    <!-- Spacer to push items to the bottom -->
+    <div class="flex-grow"></div>
+    <nav>
+      <ul class="list-none p-0 m-0">
+        <li class="mb-2"><a href="#" class="block p-2 rounded-md text-gray-200 hover:bg-gray-700 active:bg-purple-600 active:text-white transition-colors duration-200">Toggle Theme</a></li>
+        <li class="mb-2"><a href="#" class="block p-2 rounded-md text-gray-200 hover:bg-gray-700 active:bg-purple-600 active:text-white transition-colors duration-200">Settings</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="flex-1 flex flex-row">
+    <!-- Content Area (Left Half) -->
+    <div class="flex-1 flex flex-col bg-gray-900 border-r border-gray-700">
+      <div class="flex bg-gray-800 border-b border-gray-700">
+        <div
+          class="px-4 py-2 cursor-pointer text-gray-400 border-r border-gray-700 hover:bg-gray-700 transition-colors duration-200"
+          [ngClass]="{'bg-gray-900 text-white border-b-2 border-purple-500': activeTab === 'document1'}"
+          (click)="selectTab('document1')"
+        >
+          Document 1
+        </div>
+        <div
+          class="px-4 py-2 cursor-pointer text-gray-400 border-r border-gray-700 hover:bg-gray-700 transition-colors duration-200"
+          [ngClass]="{'bg-gray-900 text-white border-b-2 border-purple-500': activeTab === 'webpage'}"
+          (click)="selectTab('webpage')"
+        >
+          Web Page
+        </div>
+      </div>
+      <div class="flex-1 p-5 overflow-y-auto">
+        <div *ngIf="activeTab === 'document1'">
+          <p>Welcome to your content area. This is where documents, web pages, or other tool outputs will be displayed.</p>
+          <p>This is the content for Document 1.</p>
+        </div>
+        <div *ngIf="activeTab === 'webpage'">
+          <p>This is the content for Web Page.</p>
+          <p>Imagine a web browser embedded here.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat Area (Right Half) -->
+    <div class="flex-1 flex flex-col bg-gray-900 p-5">
+      <div class="text-purple-500 mb-4 font-semibold text-lg">
+        <h2>Jarvis Chat</h2>
+      </div>
+      <div class="flex-1 overflow-y-auto mb-4">
+        <p class="bg-gray-800 p-3 rounded-lg mb-2 leading-relaxed">Hello! How can I assist you today?</p>
+      </div>
+      <div class="flex gap-2">
+        <input type="text" placeholder="Type your command..." class="flex-1 p-2 border border-gray-700 rounded-md bg-gray-800 text-gray-200 focus:outline-none focus:border-purple-500">
+        <button class="bg-purple-600 text-white px-4 py-2 rounded-md cursor-pointer text-base transition-colors duration-200 hover:bg-purple-700 active:bg-purple-800">Send</button>
+      </div>
+    </div>
+  </main>
+</div>
