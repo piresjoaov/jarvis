@@ -1,0 +1,10 @@
+<div class="space-y-2">
+  <h2 class="text-lg font-semibold mb-4">Chat History</h2>
+
+  <div
+    *ngFor="let chat of chatList"
+    class="p-3 rounded-md hover:bg-gray-800 cursor-pointer transition"
+  >
+    {{ chat.title }}
+  </div>
+</div>

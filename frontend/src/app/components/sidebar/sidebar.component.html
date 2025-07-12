@@ -1,1 +1,23 @@
-<p>sidebar works!</p>
+<!-- Fixed full-height sidebar -->
+<div class="fixed top-0 left-0 h-screen w-64 bg-gray-900 text-white flex flex-col border-r border-gray-800">
+
+  <!-- Top: Chat History Scrollable Area -->
+  <div class="flex-1 overflow-y-auto px-4 py-6">
+    <app-chat-history></app-chat-history>
+  </div>
+
+  <!-- Bottom: Settings and Auth Buttons -->
+  <div class="px-4 py-4 border-t border-gray-800 space-y-2">
+    <button
+      class="w-full text-left p-2 rounded-md hover:bg-gray-800 transition"
+    >
+      ⚙️ Settings
+    </button>
+
+    <button
+      class="w-full text-left p-2 rounded-md hover:bg-gray-800 transition"
+    >
+      🔐 Log In / Sign Up
+    </button>
+  </div>
+</div>
